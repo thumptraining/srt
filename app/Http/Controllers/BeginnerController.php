@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beginner;
-use Illuminate\Http\Request;
+
 use App\Http\Requests\StorebeginnerRequest;
 
 /**
