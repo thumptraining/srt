@@ -32,7 +32,7 @@
                         <div class="lg:text-left text-center">
                             <img src="{{asset('img/srt.png')}}" alt="{{ config('app.name', 'Laravel') }}" class="w-28 mx-auto">
                             <h2 class="mt-6 text-5xl font-bold text-gray-100 uppercase text-center">
-                                ¡Hola runner! chupalo
+                                ¡Hola runner!
                             </h2>
                             <p class="mt-10 text-xl text-gray-200 text-center">Este es el portal de entrenamiento de Soy Runner Team.</p>
                         </div>
