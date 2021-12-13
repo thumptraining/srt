@@ -13,10 +13,6 @@ use App\Http\Requests\StorebeginnerRequest;
 class BeginnerController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('can:Crear Entrenamiento')->only('edit', 'update');
-    }
 
     /**
      * Display a listing of the resource.
@@ -27,7 +23,8 @@ class BeginnerController extends Controller
     {
         $beginners = Beginner::paginate();
 
-        return view('beginner.index');
+        return view('beginner.index', compact('beginners'))
+            ->with('i', (request()->input('page', 1) - 1) * $beginners->perPage());
     }
 
     /**
