@@ -1,107 +1,33 @@
-@extends('layouts.app')
+<x-app-layout>
+    <div class="w-full mt-5 bg-white flex items-center justify-center font-sans overflow-hidden">
+    
+        <div class="container w-full  overscroll-contain">
 
-@section('template_title')
-    Intermediate
-@endsection
+            @livewire('alert.form')
 
-@section('content')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-
-                            <span id="card_title">
-                                {{ __('Intermediate') }}
-                            </span>
-
-                             <div class="float-right">
-                                <a href="{{ route('intermediates.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
-                                </a>
-                              </div>
-                        </div>
-                    </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
-
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead class="thead">
-                                    <tr>
-                                        <th>No</th>
-                                        
-										<th>Week</th>
-										<th>Day</th>
-										<th>Stages</th>
-										<th>Categories</th>
-										<th>Warm</th>
-										<th>Whours</th>
-										<th>Wminute</th>
-										<th>Wseconds</th>
-										<th>Wzone</th>
-										<th>Rep</th>
-										<th>Workout</th>
-										<th>Thours</th>
-										<th>Tminute</th>
-										<th>Tseconds</th>
-										<th>Tzone</th>
-										<th>Cool</th>
-										<th>Chours</th>
-										<th>Cminute</th>
-										<th>Cseconds</th>
-
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($intermediates as $intermediate)
-                                        <tr>
-                                            <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $intermediate->week }}</td>
-											<td>{{ $intermediate->day }}</td>
-											<td>{{ $intermediate->stages }}</td>
-											<td>{{ $intermediate->categories }}</td>
-											<td>{{ $intermediate->warm }}</td>
-											<td>{{ $intermediate->whours }}</td>
-											<td>{{ $intermediate->wminute }}</td>
-											<td>{{ $intermediate->wseconds }}</td>
-											<td>{{ $intermediate->wzone }}</td>
-											<td>{{ $intermediate->rep }}</td>
-											<td>{{ $intermediate->workout }}</td>
-											<td>{{ $intermediate->thours }}</td>
-											<td>{{ $intermediate->tminute }}</td>
-											<td>{{ $intermediate->tseconds }}</td>
-											<td>{{ $intermediate->tzone }}</td>
-											<td>{{ $intermediate->cool }}</td>
-											<td>{{ $intermediate->chours }}</td>
-											<td>{{ $intermediate->cminute }}</td>
-											<td>{{ $intermediate->cseconds }}</td>
-
-                                            <td>
-                                                <form action="{{ route('intermediates.destroy',$intermediate->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('intermediates.show',$intermediate->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('intermediates.edit',$intermediate->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                {!! $intermediates->links() !!}
+            <div class="w-full inline-flex items-center bg-neutral leading-none text-primary rounded-full p-2 shadow text-teal text-sm">
+                <a href="{{route('dashboard')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-11 w-11 inline-flex bg-white text-primary rounded-full px-3 justify-center items-center mx-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </a>
+                <span class="inline-flex px-2 text-md md:text-lg uppercase text-white">Plan Medio maratón.</span>
             </div>
+            
+            @can('Crear Entrenamiento' )
+                <div>
+                    <a href="{{ route('intermediates.create') }}" class='btn btn-primary my-5'>
+                        Nuevo Registro
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-6 h-6 ml-2 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+        
+                    </a>
+                </div>
+            @endcan
+
+            @livewire('plan.intermediate')
         </div>
     </div>
-@endsection
+</x-app-layout>
+
