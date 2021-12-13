@@ -10,6 +10,7 @@
        <div class="followers">
           <p class="text-lg">{{Auth::user()->email}}</p>
           <p class="text-gray-400 text-sm">Email</p>
+          <a href="{{ route('profile.show') }}" class="btn btn-block btn-sm mt-5">Editar Perfil</a>
        </div>
    
     </div>
