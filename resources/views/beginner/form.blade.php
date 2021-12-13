@@ -1,104 +1,330 @@
-<div class="box box-info padding-1">
-    <div class="box-body">
-        
-        <div class="form-group">
-            {{ Form::label('week') }}
-            {{ Form::text('week', $beginner->week, ['class' => 'form-control' . ($errors->has('week') ? ' is-invalid' : ''), 'placeholder' => 'Week']) }}
-            {!! $errors->first('week', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('day') }}
-            {{ Form::text('day', $beginner->day, ['class' => 'form-control' . ($errors->has('day') ? ' is-invalid' : ''), 'placeholder' => 'Day']) }}
-            {!! $errors->first('day', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('stages') }}
-            {{ Form::text('stages', $beginner->stages, ['class' => 'form-control' . ($errors->has('stages') ? ' is-invalid' : ''), 'placeholder' => 'Stages']) }}
-            {!! $errors->first('stages', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('categories') }}
-            {{ Form::text('categories', $beginner->categories, ['class' => 'form-control' . ($errors->has('categories') ? ' is-invalid' : ''), 'placeholder' => 'Categories']) }}
-            {!! $errors->first('categories', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('warm') }}
-            {{ Form::text('warm', $beginner->warm, ['class' => 'form-control' . ($errors->has('warm') ? ' is-invalid' : ''), 'placeholder' => 'Warm']) }}
-            {!! $errors->first('warm', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('whours') }}
-            {{ Form::text('whours', $beginner->whours, ['class' => 'form-control' . ($errors->has('whours') ? ' is-invalid' : ''), 'placeholder' => 'Whours']) }}
-            {!! $errors->first('whours', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('wminute') }}
-            {{ Form::text('wminute', $beginner->wminute, ['class' => 'form-control' . ($errors->has('wminute') ? ' is-invalid' : ''), 'placeholder' => 'Wminute']) }}
-            {!! $errors->first('wminute', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('wseconds') }}
-            {{ Form::text('wseconds', $beginner->wseconds, ['class' => 'form-control' . ($errors->has('wseconds') ? ' is-invalid' : ''), 'placeholder' => 'Wseconds']) }}
-            {!! $errors->first('wseconds', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('wzone') }}
-            {{ Form::text('wzone', $beginner->wzone, ['class' => 'form-control' . ($errors->has('wzone') ? ' is-invalid' : ''), 'placeholder' => 'Wzone']) }}
-            {!! $errors->first('wzone', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('rep') }}
-            {{ Form::text('rep', $beginner->rep, ['class' => 'form-control' . ($errors->has('rep') ? ' is-invalid' : ''), 'placeholder' => 'Rep']) }}
-            {!! $errors->first('rep', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('workout') }}
-            {{ Form::text('workout', $beginner->workout, ['class' => 'form-control' . ($errors->has('workout') ? ' is-invalid' : ''), 'placeholder' => 'Workout']) }}
-            {!! $errors->first('workout', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('thours') }}
-            {{ Form::text('thours', $beginner->thours, ['class' => 'form-control' . ($errors->has('thours') ? ' is-invalid' : ''), 'placeholder' => 'Thours']) }}
-            {!! $errors->first('thours', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('tminute') }}
-            {{ Form::text('tminute', $beginner->tminute, ['class' => 'form-control' . ($errors->has('tminute') ? ' is-invalid' : ''), 'placeholder' => 'Tminute']) }}
-            {!! $errors->first('tminute', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('tseconds') }}
-            {{ Form::text('tseconds', $beginner->tseconds, ['class' => 'form-control' . ($errors->has('tseconds') ? ' is-invalid' : ''), 'placeholder' => 'Tseconds']) }}
-            {!! $errors->first('tseconds', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('tzone') }}
-            {{ Form::text('tzone', $beginner->tzone, ['class' => 'form-control' . ($errors->has('tzone') ? ' is-invalid' : ''), 'placeholder' => 'Tzone']) }}
-            {!! $errors->first('tzone', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('cool') }}
-            {{ Form::text('cool', $beginner->cool, ['class' => 'form-control' . ($errors->has('cool') ? ' is-invalid' : ''), 'placeholder' => 'Cool']) }}
-            {!! $errors->first('cool', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('chours') }}
-            {{ Form::text('chours', $beginner->chours, ['class' => 'form-control' . ($errors->has('chours') ? ' is-invalid' : ''), 'placeholder' => 'Chours']) }}
-            {!! $errors->first('chours', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('cminute') }}
-            {{ Form::text('cminute', $beginner->cminute, ['class' => 'form-control' . ($errors->has('cminute') ? ' is-invalid' : ''), 'placeholder' => 'Cminute']) }}
-            {!! $errors->first('cminute', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('cseconds') }}
-            {{ Form::text('cseconds', $beginner->cseconds, ['class' => 'form-control' . ($errors->has('cseconds') ? ' is-invalid' : ''), 'placeholder' => 'Cseconds']) }}
-            {!! $errors->first('cseconds', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
 
+<div class="avatar flex justify-center items-center ">
+    <div class="mb-8 rounded-full w-36 h-36">
+        <img src="{{asset('img/corriendo.png')}}">
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+</div> 
+<!-- SEMANA DIA FASE -->
+<div class="grid sm:grid-cols-3 gap-2 mb-2">
+    <div class=" w-full mb-2">
+        <!-- semana -->
+        {{ Form::label('Semana') }}
+        {{ Form::number('week', $beginner->week, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('week') ? ' is-invalid' : ''), 'placeholder' => 'Semana']) }}
+        
     </div>
+    <div class=" w-full mb-2">
+        <!-- Dia -->
+        {{ Form::label('Día') }}
+        {{ Form::select('day', array('Lunes' => 'Lunes', 'Martes' => 'Martes','Miércoles' => 'Miércoles', 'Jueves' => 'Jueves', 'Viernes' => 'Viernes', 'Sábado' => 'Sábado', 'Domingo' => 'Domingo' ), $beginner->day, ['class' => 'w-full select select-bordered select-primary' . ($errors->has('day') ? ' is-invalid' : ''), 'placeholder' => 'Día']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        <!-- Fase del entrenmaiento -->
+        {{ Form::label('Período') }}
+        {{ Form::select('stages', array('Básico' => 'Básico', 'General' => 'General','Específico' => 'Específico' ), $beginner->stages, ['class' => 'w-full select select-bordered select-primary' . ($errors->has('stages') ? ' is-invalid' : ''), 'placeholder' => 'Período']) }}
+        
+    </div>
+    {!! $errors->first('week', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('day', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('stages', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div> 
+<!-- Categoria e intensidad -->
+<div class="grid sm:grid-cols-2 gap-2">
+    <div class=" w-full mb-2">
+        <!-- Categoria -->
+        {{ Form::label('Tipo de entrenamiento') }}
+        {{ Form::select('categories', array('Repeticiones' => 'Repeticiones', 'Carrera continua' => 'Carrera continua','Intervalos' => 'Intervalos', 'Fortalecimiento' => 'Fortalecimiento'), $beginner->categories, ['class' => 'w-full select select-bordered select-primary' . ($errors->has('categories') ? ' is-invalid' : ''), 'placeholder' => 'Tipo de entrenamiento']) }}
+        
+    </div>
+
+    <!-- intent. Calent -->
+    <div class=" w-full mb-2">
+        {{ Form::label('Intensidad') }}
+        {{ Form::select('wzone', array('Suave' => 'Z1 / 50% - 60%', 'Aeróbico' => 'Z2 /60% - 70%','Umbral aeróbico' => 'Z3 /70% - 80%', 'Umbral Anaeróbico' => 'Z4 /80% - 90%', 'VO2Máx' => 'Z5 /90% - 100%' ), $beginner->wzone, ['class' => 'w-full select select-bordered select-primary' . ($errors->has('wzone') ? ' is-invalid' : ''), 'placeholder' => 'Zona']) }}
+        
+    </div>
+    {!! $errors->first('categories', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('wzone', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+
+<!-- Descrip. Calent -->
+<div class=" w-full mb-5">
+    {{ Form::label('Calentamiento.') }}
+    {{ Form::textarea('warm', $beginner->warm, ['class' => 'w-full textarea h-24 textarea-bordered textarea-primary' . ($errors->has('warm') ? ' is-invalid' : ''), 'placeholder' => 'Descripción...']) }}
+    {!! $errors->first('warm', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+
+<!-- tiempo Calent -->
+<div class="grid grid-cols-3 gap-2">
+    <div class=" w-full mb-2">
+        {{ Form::label('Hora') }}
+        {{ Form::number('whours', $beginner->whours, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('whours') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Minutos') }}
+        {{ Form::number('wminute', $beginner->wminute, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('wminute') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Segundos') }}
+        {{ Form::number('wseconds', $beginner->wseconds, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('wseconds') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    {!! $errors->first('whours', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('wminute', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('wseconds', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+<div class="divider"></div>
+
+<!-- REPETICIONES E INTENSIDAD -->
+<div class="grid sm:grid-cols-2 gap-2">
+    <div class=" w-full mb-2">
+        {{ Form::label('Repeticiones.') }}
+        {{ Form::text('rep', $beginner->rep, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('rep') ? ' is-invalid' : ''), 'placeholder' => 'Repeticiones']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Intensidad.') }}
+        {{ Form::select('tzone', array('Suave' => 'Z1 / 50% - 60%', 'Aeróbico' => 'Z2 /60% - 70%','Umbral aeróbico' => 'Z3 /70% - 80%', 'Umbral Anaeróbico' => 'Z4 /80% - 90%', 'VO2Máx' => 'Z5 /90% - 100%' ), $beginner->tzone, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('tzone') ? ' is-invalid' : ''), 'placeholder' => 'Intensidad']) }}
+        
+    </div>
+    {!! $errors->first('rep', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('tzone', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+
+</div>
+
+<!-- TIEMPO DE ENTRENAMIENTO -->
+<div class="grid grid-cols-3 gap-2">
+    <div class=" w-full mb-2">
+        {{ Form::label('Hora') }}
+        {{ Form::number('thours', $beginner->thours, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('thours') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Minutos') }}
+        {{ Form::number('tminute', $beginner->tminute, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('tminute') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Segundos') }}
+        {{ Form::number('tseconds', $beginner->tseconds, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('tseconds') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    {!! $errors->first('thours', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('tminute', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('tseconds', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+
+<!-- DESCRIPCION DE ENTRENAMIENTO -->
+<div class=" w-full mb-5">
+    {{ Form::label('Entrenamiento.') }}
+    {{ Form::textarea('workout', $beginner->workout, ['class' => 'w-full textarea h-24 textarea-bordered textarea-primary' . ($errors->has('workout') ? ' is-invalid' : ''), 'placeholder' => 'Descripción...']) }}
+    {!! $errors->first('workout', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+
+<div class="divider"></div>
+
+<!-- SOLTURA -->
+<div class=" w-full mb-5">
+    {{ Form::label('Soltura.') }}
+    {{ Form::textarea('cool', $beginner->cool, ['class' => 'w-full textarea h-24 textarea-bordered textarea-primary' . ($errors->has('cool') ? ' is-invalid' : ''), 'placeholder' => 'Descripción...']) }}
+    {!! $errors->first('cool', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+
+<!-- TIEMPO DE SOLTURA -->
+<div class="grid grid-cols-3 gap-2">
+    <div class=" w-full mb-2">
+        {{ Form::label('Hora') }}
+        {{ Form::text('chours', $beginner->chours, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('chours') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Minutos') }}
+        {{ Form::text('cminute', $beginner->cminute, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('cminute') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    <div class=" w-full mb-2">
+        {{ Form::label('Segundos') }}
+        {{ Form::text('cseconds', $beginner->cseconds, ['class' => 'w-full input input-primary input-bordered' . ($errors->has('cseconds') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
+        
+    </div>
+    {!! $errors->first('chours', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('cminute', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+    {!! $errors->first('cseconds', '
+        <div class="alert alert-error my-2">
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 mx-2 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>                          
+                </svg> 
+                <label>:message</label>
+            </div>
+        </div>
+    ') !!}
+</div>
+
+<div class="box-footer mt-10">
+    <button type="submit" class="btn btn-primary btn-block">Guardar</button>
 </div>
