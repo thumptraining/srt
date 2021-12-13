@@ -49,7 +49,7 @@
 
                         <!-- LOGO MOBIL -->
                         <a href="{{ route('dashboard') }}">
-                            <x-jet-application-mark class="block h-9 w-auto" />
+                            <x-application-mark class="block h-9 w-auto" />
                         </a>
 
                         <!-- MENU USUARIO MOBIL -->
@@ -63,7 +63,7 @@
                         <!-- LOGO MENU PC -->
                         <div class="flex-shrink-0 py-4">
                             <a href="{{ route('dashboard') }}">
-                                <x-jet-application-mark class="block h-9 w-auto" />
+                                <x-application-mark class="block h-9 w-auto" />
                             </a>
                         </div>
 
