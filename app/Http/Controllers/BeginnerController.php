@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beginner;
-
 use App\Http\Requests\StorebeginnerRequest;
 
 /**
@@ -19,6 +18,7 @@ class BeginnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $beginners = Beginner::paginate();
