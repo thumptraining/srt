@@ -15,7 +15,7 @@ class BeginnerController extends Controller
 
     public function __construct()
     {
-        $this->middleware('can:Crear Entrenamiento')->only('edit', 'update' );
+        $this->middleware('can:Crear Entrenamiento')->only('edit', 'update');
     }
 
     /**
@@ -27,8 +27,7 @@ class BeginnerController extends Controller
     {
         $beginners = Beginner::paginate();
 
-        return view('beginner.index', compact('beginners'))
-            ->with('i', (request()->input('page', 1) - 1) * $beginners->perPage());
+        return view('beginner.index');
     }
 
     /**
