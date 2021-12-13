@@ -33,9 +33,3 @@ Route::middleware(['auth:sanctum', 'verified'])->resource('users', UserControlle
 Route::middleware(['auth:sanctum', 'verified'])->resource('weights', WeightController::class)->names('weights');
 
 Route::middleware(['auth:sanctum', 'verified'])->resource('speeds', SpeedController::class)->names('speeds');
-
-Route::middleware(['auth:sanctum', 'verified'])->resource('beginners', BeginnerController::class)->names('beginners');
-
-Route::middleware(['auth:sanctum', 'verified'])->resource('intermediates', IntermediateController::class)->names('intermediates');
-
-Route::middleware(['auth:sanctum', 'verified'])->resource('advances', AdvanceController::class)->names('advances');
