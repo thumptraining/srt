@@ -1,4 +1,4 @@
-<x-jet-form-section submit="updateProfileInformation">
+<x-form-section submit="updateProfileInformation">
    
 
     <x-slot name="form">
@@ -32,48 +32,48 @@
                     </div>
                 </div>
                 
-                <x-jet-secondary-button class="btn btn-block" type="button" x-on:click.prevent="$refs.photo.click()">
+                <x-secondary-button class="btn btn-block" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Selecionar foto') }}
-                </x-jet-secondary-button>
+                </x-secondary-button>
 
                 @if ($this->user->profile_photo_path)
-                    <x-jet-secondary-button type="button" class="btn btn-block mt-5 " wire:click="deleteProfilePhoto">
+                    <x-secondary-button type="button" class="btn btn-block mt-5 " wire:click="deleteProfilePhoto">
                         {{ __('Borrar foto') }}
-                    </x-jet-secondary-button>
+                    </x-secondary-button>
                 @endif
 
-                <x-jet-input-error for="photo" class="mt-2" />
+                <x-input-error for="photo" class="mt-2" />
             </div>
         @endif
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Nombre') }}" />
-            <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
-            <x-jet-input-error for="name" class="mt-2" />
+            <x-label for="name" value="{{ __('Nombre') }}" />
+            <x-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
+            <x-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="email" value="{{ __('Email') }}" />
-            <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
-            <x-jet-input-error for="email" class="mt-2" />
+            <x-label for="email" value="{{ __('Email') }}" />
+            <x-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
+            <x-input-error for="email" class="mt-2" />
         </div>
     </x-slot>
 
     <x-slot name="actions" >
         <div class="container px-5 mt-5">
-            <x-jet-action-message class="mr-3" on="saved">
+            <x-action-message class="mr-3" on="saved">
                 {{ __('Guardado') }}
-            </x-jet-action-message>
+            </x-action-message>
     
-            <x-jet-button wire:loading.attr="disabled" wire:target="photo">
+            <x-button wire:loading.attr="disabled" wire:target="photo">
                 {{ __('Guardar') }}
-            </x-jet-button>
+            </x-button>
         </div>
         
     </x-slot>
 
     
 
-</x-jet-form-section>
+</x-form-section>
