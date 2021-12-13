@@ -4,7 +4,7 @@
         <!-- LOGO MENU FINAL -->
         <div class="flex items-center justify-center flex-shrink-0 py-10">
             <a href="{{ route('dashboard') }}">
-                <x-jet-application-mark class="w-24 h-auto"/>
+                <x-application-mark class="w-24 h-auto"/>
             </a>
         </div>
 
