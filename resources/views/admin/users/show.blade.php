@@ -26,29 +26,8 @@
         </div>
 
       </div>
-
-      <!-- ESTADISTICAS -->
-      <div class="max-w-sm md:max-w-full col-span-2  container mx-auto  rounded-lg overflow-hidden  my-2 bg-white">
-        
-        <div class="w-full  lg:w-1/4 ">
-          <div class="widget w-full p-4 rounded-lg bg-white border-l-8 border border-primary ">
-              <div class="flex items-center">
-                <div class="icon w-14 p-3.5 bg-primary text-white rounded-full mr-3">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </div>
-                  <div class="flex flex-col justify-center">
-                    <div class="text-lg">3456</div>
-                    <div class="text-sm text-gray-400">Customers</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <!-- ESTADISTICAS PESO -->
+      @livewire('components.users.peso')
 
     </div>
   </div>

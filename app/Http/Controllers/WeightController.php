@@ -16,7 +16,7 @@ class WeightController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('can:Crear controles')->only('index', 'edit', 'update' );
+        $this->middleware('can:Crear controles')->only('index', 'edit', 'update');
     }
 
     /**
@@ -26,9 +26,8 @@ class WeightController extends Controller
      */
     public function index()
     {
-   
+
         return view('weight.index');
-           
     }
 
     /**
